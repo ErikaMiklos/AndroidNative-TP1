@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="fr.m2ccn.mmm_tp1.MainActivity">
+
+
+    <item android:id="@+id/item1"
+        android:title="@string/reset"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/item2"
+        android:title="@string/numero_de_telephone"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/item3"
+        android:title="@string/wiki_des_villes"
+        app:showAsAction="never"/>
+
+</menu>

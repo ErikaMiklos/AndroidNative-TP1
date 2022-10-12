@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="clientViewModel"
+            type="fr.m2ccn.mmm_tp1.ClientViewModel"/>
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <TextView
+        android:id="@+id/infos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_first_fragment"
+        app:layout_constraintBottom_toTopOf="@+id/nom"
+        app:layout_constraintStart_toStartOf="@+id/nom"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnValider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/valider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/nom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Nom"
+        android:text="@={clientViewModel.name}"
+        app:layout_constraintBottom_toTopOf="@+id/prenom"
+        app:layout_constraintStart_toStartOf="@+id/prenom"
+        app:layout_constraintTop_toBottomOf="@+id/infos" />
+
+    <EditText
+        android:id="@+id/prenom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Prenom"
+        android:text="@={clientViewModel.prenom}"
+        app:layout_constraintBottom_toTopOf="@+id/villeDeNaissance"
+        app:layout_constraintStart_toStartOf="@+id/villeDeNaissance"
+        app:layout_constraintTop_toBottomOf="@+id/nom" />
+
+    <EditText
+        android:id="@+id/numeroDeTelephone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="@string/numero_de_telephone"
+        android:text="@={clientViewModel.numTel}"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnValider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/departements" />
+
+    <EditText
+        android:id="@+id/villeDeNaissance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/ville_de_naissance"
+        android:text="@={clientViewModel.ville}"
+        app:layout_constraintBottom_toTopOf="@+id/departements"
+        app:layout_constraintStart_toStartOf="@+id/departements"
+        app:layout_constraintTop_toBottomOf="@+id/prenom" />
+
+    <Spinner
+        android:id="@+id/departements"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/departements"
+        app:layout_constraintBottom_toTopOf="@id/numeroDeTelephone"
+        app:layout_constraintStart_toStartOf="@id/numeroDeTelephone"
+        app:layout_constraintTop_toBottomOf="@id/villeDeNaissance"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

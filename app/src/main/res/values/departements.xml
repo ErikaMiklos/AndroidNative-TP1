@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="departements">
+        <item>"Bretagne"</item>
+        <item>"Hautes-Alpes"</item>
+        <item>"Vendée"</item>
+        <item>"Loire"</item>
+    </string-array>
+
+</resources>
